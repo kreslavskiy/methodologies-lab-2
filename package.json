@@ -8,7 +8,9 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc --build",
+    "start": "node ./dist/src/linkedListBasedOnArray.js"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",
