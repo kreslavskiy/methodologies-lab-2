@@ -27,7 +27,7 @@ export default class LinkedList extends Array<LinkedListNode> {
   }
 
   findLastByValue(value: any): LinkedListNode {
-    for (let i = this.length; i >= 0; i--) {
+    for (let i = this.length - 1; i >= 0; i--) {
       if (this[i].value === value) return this[i];
     }
   }
