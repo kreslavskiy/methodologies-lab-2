@@ -1,4 +1,4 @@
-import LinkedListNode from './linkedListNode.js';
+import LinkedListNode from './linkedListNode';
 
 export default class LinkedList extends Array<LinkedListNode> {
   append(value: any) {
