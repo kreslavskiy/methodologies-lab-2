@@ -1,4 +1,3 @@
-import { link } from 'fs';
 import LinkedList from '../src/linkedListBasedOnArray';
 
 describe('Linked list based on array', () => {
