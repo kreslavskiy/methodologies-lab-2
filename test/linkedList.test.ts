@@ -25,11 +25,13 @@ describe('Linked list based on array', () => {
   it('should get first node in list by value', () => {
     linkedList.append('First node');
     linkedList.append('Second node');
-    expect(linkedList.findFirstByValue('Second node').value).toBe('Second node');
+    expect(linkedList.findFirstByValue('Second node')).toBe(1);
+    expect(linkedList.findFirstByValue('Third node')).toBe(-1);
   });
 
   it('should get last node in list by value', () => {
-    expect(linkedList.findLastByValue('First node').value).toBe('First node');
+    expect(linkedList.findLastByValue('First node')).toBe(0);
+    expect(linkedList.findLastByValue('Third node')).toBe(-1);
   });
 
   it('should get node by index', () => {
@@ -43,7 +45,7 @@ describe('Linked list based on array', () => {
 
   it('should delete node by index', () => {
     expect(linkedList.getLength()).toBe(3);
-    
+
     const deleted = linkedList.delete(1);
 
     expect(deleted.value).toBe('Node between 1st and 2nd');

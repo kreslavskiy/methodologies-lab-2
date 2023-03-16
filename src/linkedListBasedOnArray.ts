@@ -21,16 +21,20 @@ export default class LinkedList extends Array<LinkedListNode> {
     this.splice(index, 0, node);
   }
 
-  findFirstByValue(value: any): LinkedListNode {
+  findFirstByValue(value: any): number {
+    let nodeToFind: LinkedListNode;
     for (const node of this) {
-      if (node.value === value) return node;
+      if (node.value === value) nodeToFind = node;
     }
+    return !!nodeToFind ? this.indexOf(nodeToFind) : -1;
   }
 
-  findLastByValue(value: any): LinkedListNode {
-    for (let i = this.length - 1; i >= 0; i--) {
-      if (this[i].value === value) return this[i];
+  findLastByValue(value: any): number {
+    let nodeToFind: LinkedListNode;
+    for (const node of this) {
+      if (node.value === value) nodeToFind = node;
     }
+    return !!nodeToFind ? this.indexOf(nodeToFind) : -1;
   }
 
   clear() {
