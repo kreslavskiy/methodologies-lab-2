@@ -79,7 +79,7 @@ describe('Linked list based on array', () => {
     expect(linkedList.getByIndex(0)).toBe('Second node');
     expect(linkedList.getByIndex(3)).toBe('First node');
 
-    linkedList.reverse();
+    linkedList.reverseList();
 
     expect(linkedList.getByIndex(0)).toBe('First node');
     expect(linkedList.getByIndex(3)).toBe('Second node');

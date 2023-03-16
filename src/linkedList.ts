@@ -135,7 +135,6 @@ export default class LinkedList {
   deleteAll(value: any) {
     let size = this.getLength();
     for (let i = 0; i < size; i++) {
-      console.log(i);
       const nodeValue = this.getByIndex(i);
       if (nodeValue === value) {
         this.delete(i);
