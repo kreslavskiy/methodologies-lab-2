@@ -3,11 +3,9 @@ import LinkedList from '../src/linkedListBasedOnArray';
 
 describe('Linked list based on array', () => {
   let linkedList;
-  let secondList;
 
   beforeAll(() => {
     linkedList = new LinkedList();
-    secondList = new LinkedList();
   });
 
   it('should append one node', () => {
@@ -54,14 +52,27 @@ describe('Linked list based on array', () => {
     linkedList.append('First node');
     linkedList.append('First node');
 
-    linkedList.printList();
-
     expect(linkedList.getLength()).toBe(4);
 
     linkedList.deleteAll('First node');
 
-    linkedList.printList();
-
     expect(linkedList.getLength()).toBe(1);
+  });
+
+  it('should clone the list', () => {
+    const newList = linkedList.clone();
+    expect(newList.getByIndex(0).value).toBe(linkedList.getByIndex(0).value);
+  });
+
+  it('should reverse the list', () => {
+    linkedList.append('First node');
+
+    expect(linkedList.getByIndex(0).value).toBe('Second node');
+    expect(linkedList.getByIndex(1).value).toBe('First node');
+
+    linkedList.reverse();
+
+    expect(linkedList.getByIndex(0).value).toBe('First node');
+    expect(linkedList.getByIndex(1).value).toBe('Second node');
   });
 });
