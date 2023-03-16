@@ -1,4 +1,4 @@
-import LinkedList from '../src/linkedListBasedOnArray';
+import LinkedList from '../src/linkedList';
 
 describe('Linked list based on array', () => {
   let linkedList;
@@ -25,12 +25,15 @@ describe('Linked list based on array', () => {
   it('should get first node in list by value', () => {
     linkedList.append('First node');
     linkedList.append('Second node');
+    linkedList.append('Second node');
+    linkedList.append('Second node');
+
     expect(linkedList.findFirstByValue('Second node')).toBe(1);
     expect(linkedList.findFirstByValue('Third node')).toBe(-1);
   });
 
   it('should get last node in list by value', () => {
-    expect(linkedList.findLastByValue('First node')).toBe(0);
+    expect(linkedList.findLastByValue('Second node')).toBe(3);
     expect(linkedList.findLastByValue('Third node')).toBe(-1);
   });
 
