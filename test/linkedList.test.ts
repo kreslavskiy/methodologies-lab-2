@@ -1,4 +1,4 @@
-import LinkedList from '../src/linkedListBasedOnArray';
+import LinkedList from '../src/linkedList';
 
 describe('Linked list based on array', () => {
   let linkedList;
