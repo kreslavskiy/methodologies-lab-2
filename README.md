@@ -1,9 +1,9 @@
 # 2 lab
 
 ## Linked list
-* First implementation of of program is a linked list based on build-in array class.
+* First implementation of the program is a linked list based on build-in array class.
 
-* Second implementation is classic singly linked circular list.
+* [Second implementation](https://github.com/kreslavskiy/methodologies-lab-2/blob/master/src/linkedListNode.ts) is classic singly linked circular list.
 
 ## Calculation of variant
 Defining variant formula: number of the gradebook % 4
