@@ -1,4 +1,4 @@
-import LinkedList from '../src/linkedList';
+import LinkedList from '../src/linkedListBasedOnArray';
 
 describe('Linked list based on array', () => {
   let linkedList;
@@ -38,6 +38,7 @@ describe('Linked list based on array', () => {
   });
 
   it('should get node by index', () => {
+    expect(linkedList.getByIndex(0).value).toBe('First node');
     expect(linkedList.getByIndex(1).value).toBe('Second node');
   });
 
