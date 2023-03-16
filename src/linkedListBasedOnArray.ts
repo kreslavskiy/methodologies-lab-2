@@ -44,9 +44,10 @@ export default class LinkedList extends Array<LinkedListNode> {
   }
 
   deleteAll(value: any) {
-    for (const node of this) {
-      if (node.value === value) {
-        this.splice(this.indexOf(node), 1);
+    for (let i = 0; i < this.length; i++) {
+      if (this[i].value === value) {
+        this.splice(i, 1); 
+        i--; 
       }
     }
   }
