@@ -1,7 +1,7 @@
 # 2 lab
 
 ## Linked list
-* First implementation of the program is a linked list based on build-in array class.
+* [First implementation](https://github.com/kreslavskiy/methodologies-lab-2/commit/997df2ca9ff543dc33297c966da5f090f5896180#diff-b036aae90e0ea482c48a797b11e1ccea4f5d47b9c5459b8ffed5ea5d3feb4bd1) of the program is a linked list based on build-in array class.
 
 * [Second implementation](https://github.com/kreslavskiy/methodologies-lab-2/blob/master/src/linkedListNode.ts) is classic singly linked circular list.
 
