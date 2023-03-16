@@ -24,7 +24,10 @@ export default class LinkedList extends Array<LinkedListNode> {
   findFirstByValue(value: any): number {
     let nodeToFind: LinkedListNode;
     for (const node of this) {
-      if (node.value === value) nodeToFind = node;
+      if (node.value === value) {
+        nodeToFind = node;
+        break;
+      }
     }
     return !!nodeToFind ? this.indexOf(nodeToFind) : -1;
   }
@@ -34,7 +37,7 @@ export default class LinkedList extends Array<LinkedListNode> {
     for (const node of this) {
       if (node.value === value) nodeToFind = node;
     }
-    return !!nodeToFind ? this.indexOf(nodeToFind) : -1;
+    return !!nodeToFind ? this.lastIndexOf(nodeToFind) : -1;
   }
 
   clear() {
