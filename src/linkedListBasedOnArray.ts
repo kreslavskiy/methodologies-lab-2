@@ -12,7 +12,7 @@ export default class LinkedList extends Array<LinkedListNode> {
 
   getByIndex(index: number): LinkedListNode {
     if (index < 0 || index > this.length) throw new Error('Invalid index');
-    return this[index];
+    return this[index].value;
   }
 
   insert(value: any, index: number) {
