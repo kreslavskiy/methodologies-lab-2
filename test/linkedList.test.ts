@@ -43,7 +43,10 @@ describe('Linked list based on array', () => {
 
   it('should delete node by index', () => {
     expect(linkedList.getLength()).toBe(3);
-    linkedList.delete(1);
+    
+    const deleted = linkedList.delete(1);
+
+    expect(deleted.value).toBe('Node between 1st and 2nd');
     expect(linkedList.getLength()).toBe(2);
   });
 

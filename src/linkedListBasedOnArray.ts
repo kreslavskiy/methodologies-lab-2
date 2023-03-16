@@ -41,7 +41,9 @@ export default class LinkedList extends Array<LinkedListNode> {
 
   delete(index: number) {
     if (index < 0 || index > this.length) throw new Error('Invalid index');
+    const toDelete = this.getByIndex(index);
     this.splice(index, 1);
+    return toDelete;
   }
 
   deleteAll(value: any) {
