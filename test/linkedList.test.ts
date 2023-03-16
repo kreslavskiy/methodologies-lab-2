@@ -75,4 +75,17 @@ describe('Linked list based on array', () => {
     expect(linkedList.getByIndex(0).value).toBe('First node');
     expect(linkedList.getByIndex(1).value).toBe('Second node');
   });
+
+  it('should extend the list', () => {
+    const secondList = linkedList.clone();
+    expect(linkedList.getLength()).toBe(2);
+    expect(secondList.getLength()).toBe(2);
+
+    linkedList.extend(secondList);
+    expect(linkedList.getLength()).toBe(4);
+
+    secondList.append('Third node in 2nd list. Should not be in 1st list');
+    expect(secondList.getLength()).toBe(3);
+    expect(linkedList.getLength()).not.toBe(5);
+  });
 });
