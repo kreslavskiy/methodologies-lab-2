@@ -8,7 +8,7 @@
 ## Calculation of variant
 Defining variant formula: number of the gradebook % 4
 ```
-1218 % 2 = 2
+1218 % 4 = 2
 ```
 
 ## Instruction
